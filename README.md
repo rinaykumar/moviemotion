@@ -1,4 +1,4 @@
-**moviemotion**
+**moviemotion**\
 <img src="images/moviemotion.svg">
 
 Link to the bot:
