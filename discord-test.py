@@ -1,4 +1,4 @@
-API_TOKEN = 'ODE3NjI5Mjc0NjcyMzMyODMw.YEMSmQ.2MXL-_dj1ML25Ftzg0vudiEeY0U'
+API_TOKEN = 'token'
 
 import discord
 
