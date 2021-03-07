@@ -25,28 +25,28 @@ async def on_message(message):
                     # Save the messages to an array
                     messages = messages + " " + msg.content
 
-    # Remove newlines and tabs from messages
-    messages = messages.replace('\n', '')
-    messages = messages.replace('\t', '')
-    messages = messages.strip('\n')  
-    messages = messages.strip('\t')
-    
-    # For testing
-    print (messages)
-    print (counter)
+        # Remove newlines and tabs from messages
+        messages = messages.replace('\n', '')
+        messages = messages.replace('\t', '')
+        messages = messages.strip('\n')  
+        messages = messages.strip('\t')
+                    
+        # For testing
+        print (messages)
+        print (counter)
 
-    # Run text2emotion on messages 
-    emotions = te.get_emotion(messages)
-    print (emotions)
+        # Run text2emotion on messages 
+        emotions = te.get_emotion(messages)
+        print (emotions)
 
-    # Result from text2emotion mapped to movie genres
+        # Result from text2emotion mapped to movie genres
 
-    # Any movie db api call with selected genre
+        # Any movie db api call with selected genre
 
-    # Process and format result from movie db api to list of 3-5 movies
+        # Process and format result from movie db api to list of 3-5 movies
 
-    # DM the user                
-    await message.author.send(f'You have **{counter}** messages')
-    await message.author.send(f'{messages}')
+        # DM the user                
+        await message.author.send(f'You have **{counter}** messages')
+        await message.author.send(f'{messages}')
 
 client.run(API_TOKEN)
