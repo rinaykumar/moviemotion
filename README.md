@@ -28,6 +28,13 @@ Once the bot's been invited to your favorite Discord server, just call on moviem
 ### Youtube demo 
 https://youtu.be/RojB7Gip0NM 
 
-
+### Team: Runtime Terror
+rinaykumar#6920
+<br>
+Danish.CS()#9517
+<br>
+Naweeda#5518
+<br>
+RolandLee#9726
 
 
