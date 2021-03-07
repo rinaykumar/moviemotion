@@ -1,6 +1,4 @@
-API_TOKEN = 'ODE3NjI5Mjc0NjcyMzMyODMw.YEMSmQ.-oc7GUr__JZ1ua5VH2TTdJ2Ohzg'
-#API_TOKEN = 'NjM4NTE0NDY2MjM2OTIzOTA4.Xux0WQ.MsTWDSIQf9XWBmqrIxdNm-eGs-I' ## Scrapped rinaykumar
-#API_TOKEN = 'Bearer soh0oNvFywc3Ds7KpQPNL3E2dskaD_Qc' ## Client secret
+API_TOKEN = ''
 
 import requests
 import discord
