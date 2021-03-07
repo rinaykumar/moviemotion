@@ -1,24 +1,6 @@
-import requests
+API_TOKEN = 'ODE3NjI5Mjc0NjcyMzMyODMw.YEMSmQ.2MXL-_dj1ML25Ftzg0vudiEeY0U'
+
 import discord
-
-# Get user messages with Guild ID and User ID
-# def get_messages():
-#     headers = {'Authorization': API_TOKEN}
-#     search_url = 'https://discord.com/api/v8/guilds/758122726871007232/messages/search?author_id=698370734380154932'
-
-#     response = requests.get(search_url, headers=headers)
-#     print (response.content)
-
-#get_messages()	
-
-# def get_userid():
-#     headers = {'Authorization': API_TOKEN}
-#     search_url = 'https://discord.com/api/v8/users/719755032995823637'
-
-#     response = requests.get(search_url, headers=headers)
-#     print (response.content)
-
-#get_userid()
 
 client = discord.Client()
 
@@ -26,37 +8,37 @@ client = discord.Client()
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
+# Bot gets a message from channel
 @client.event
 async def on_message(message):
-    if message.author == client.user:
-        return
+    user_id = message.author.id
+    counter = 0
+    messages = []
 
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+    if message.content.startswith('$test'):
+         # Get user messages in the guild their in
+        for chan in message.guild.text_channels:
+            async for msg in chan.history(limit=50): # Last 50 messages in each channel 
+                if msg.author.id == user_id:                                
+                    counter += 1
+                    # Save the messages to an array
+                    messages.append(msg.content)
+    # DM the user                
+    await message.author.send(f'You have **{counter}** messages')
+    await message.author.send(f'{messages}')
 
-client.run('token')
+    # For testing
+    print (counter)  
+    print (messages)   
 
+client.run(API_TOKEN)
 
-# Bot gets a message from channel
+# TODO
 
-
-# Use api to get last 50-100 user messages in that guild
-
-
-# Parse and save the messages to a var
-
-
-# Run text2emotion on the messages var
-
+# Run text2emotion on the messages array
 
 # Result from text2emotion mapped to movie genres
 
-
 # Any movie db api call with selected genre
 
-
 # Process and format result from movie db api to list of 3-5 movies
-
-
-# Bot dm's user with movies
-
