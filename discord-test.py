@@ -18,7 +18,7 @@ async def on_message(message):
     if message.content.startswith('$test'):
          # Get user messages in the guild their in
         for chan in message.guild.text_channels:
-            async for msg in chan.history(limit=50): # Last 50 messages in each channel 
+            async for msg in chan.history(limit=100): # Last 100 messages in each channel 
                 if msg.author.id == user_id:                                
                     counter += 1
                     # Save the messages to an array
