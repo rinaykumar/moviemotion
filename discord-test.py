@@ -1,6 +1,7 @@
-API_TOKEN = 'token'
+API_TOKEN = ''
 
 import discord
+import text2emotion as te
 
 client = discord.Client()
 
@@ -13,7 +14,7 @@ async def on_ready():
 async def on_message(message):
     user_id = message.author.id
     counter = 0
-    messages = []
+    messages = ""
 
     if message.content.startswith('$test'):
          # Get user messages in the guild their in
@@ -22,23 +23,30 @@ async def on_message(message):
                 if msg.author.id == user_id:                                
                     counter += 1
                     # Save the messages to an array
-                    messages.append(msg.content)
+                    messages = messages + " " + msg.content
+
+    # Remove newlines and tabs from messages
+    messages = messages.replace('\n', '')
+    messages = messages.replace('\t', '')
+    messages = messages.strip('\n')  
+    messages = messages.strip('\t')
+    
+    # For testing
+    print (messages)
+    print (counter)
+
+    # Run text2emotion on messages 
+    emotions = te.get_emotion(messages)
+    print (emotions)
+
+    # Result from text2emotion mapped to movie genres
+
+    # Any movie db api call with selected genre
+
+    # Process and format result from movie db api to list of 3-5 movies
+
     # DM the user                
     await message.author.send(f'You have **{counter}** messages')
     await message.author.send(f'{messages}')
 
-    # For testing
-    print (counter)  
-    print (messages)   
-
 client.run(API_TOKEN)
-
-# TODO
-
-# Run text2emotion on the messages array
-
-# Result from text2emotion mapped to movie genres
-
-# Any movie db api call with selected genre
-
-# Process and format result from movie db api to list of 3-5 movies
