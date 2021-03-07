@@ -16,7 +16,7 @@ async def on_message(message):
     counter = 0
     messages = ""
 
-    if message.content.startswith('$test'):
+    if message.content.startswith('!moviemotion'):
          # Get user messages in the guild their in
         for chan in message.guild.text_channels:
             async for msg in chan.history(limit=100): # Last 100 messages in each channel 
