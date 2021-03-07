@@ -2,7 +2,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/rinaykumar/moviemotion)
 ![GitHub](https://img.shields.io/github/license/rinaykumar/moviemotion)
 
-Link to the bot:
+Link to the Discord bot:
 https://discord.com/api/oauth2/authorize?client_id=817629274672332830&permissions=83968&scope=bot
 
 ### Inspiration
@@ -16,6 +16,9 @@ We used Python and the Discord.py library to build the bot itself. Then we had t
 
 ### Challenges we ran into
 Learning Python, learning how to create a Discord bot, trying 20 different things to get user message history, searching the web for movie API's we could use for free, and working with our different schedules.
+
+### How to use it
+Once the bot's been invited to your favorite Discord server, just call on moviemotion with "!moviemotion" and you'll get a DM with 3 personalized movie recommendations. Simple as that!
 
 ### Screenshots
 <img src="images/movieMotion3.jpg" width="600">
