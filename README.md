@@ -2,7 +2,9 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/rinaykumar/moviemotion)
 ![GitHub](https://img.shields.io/github/license/rinaykumar/moviemotion)
 
-Link to the Discord bot:
+A Discord bot that uses sentiment/emotion analysis on your recent messages and recommends movies based on your mood.
+
+Link to the bot:
 https://discord.com/api/oauth2/authorize?client_id=817629274672332830&permissions=83968&scope=bot
 
 ### Inspiration
