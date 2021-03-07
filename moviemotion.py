@@ -3,6 +3,43 @@ API_TOKEN = ''
 import discord
 import text2emotion as te
 
+# movie Api
+import imdb
+moviesDB = imdb.IMDb()
+import text2emotion as te
+import nltk
+nltk.download('wordnet', quiet=True)
+
+# converting text to emotion
+text = "Today is a angry day. I don't wanna do anything today. I wanna beat this guy."
+data = te.get_emotion(text)
+print(data)
+
+# getting the motion key of maximum value
+Keymax = max(data, key=data.get) 
+print(Keymax) 
+
+# movies = moviesDB.search_movie(Keymax)
+movies = moviesDB.get_keyword(Keymax)
+
+for movie in movies:
+    print(movie)
+
+print('Searching for the movies:')
+
+# for movie in movies:
+#     title = movie['title']
+#     kind = movie['kind']
+#     year = movie['year']
+
+#     print(f'{title} - {kind} - {year}')
+
+print(len(movies))
+print(movies[0])
+# print(movies[0].keys())
+# t_result = moviesDB.search_keyword(u'action')
+
+
 client = discord.Client()
 
 @client.event
