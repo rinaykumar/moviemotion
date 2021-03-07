@@ -1,5 +1,3 @@
-API_TOKEN = ''
-
 import requests
 import discord
 
@@ -36,4 +34,29 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
 
-client.run('Token')
+client.run('token')
+
+
+# Bot gets a message from channel
+
+
+# Use api to get last 50-100 user messages in that guild
+
+
+# Parse and save the messages to a var
+
+
+# Run text2emotion on the messages var
+
+
+# Result from text2emotion mapped to movie genres
+
+
+# Any movie db api call with selected genre
+
+
+# Process and format result from movie db api to list of 3-5 movies
+
+
+# Bot dm's user with movies
+
