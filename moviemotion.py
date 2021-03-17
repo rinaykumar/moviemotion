@@ -1,5 +1,5 @@
-API_TOKEN = ''
-OMDB_TOKEN = ''
+API_TOKEN = 'ODE3NjI5Mjc0NjcyMzMyODMw.YEMSmQ.Z6JcYeF9CRU2m0uavsuHD1K80BU'
+OMDB_TOKEN = '972242a8'
 
 import discord
 import text2emotion as te
@@ -11,7 +11,7 @@ surprise = ["Alien", "Midsommar", "Shutter Island", "Gone Girl", "Get Out", "A Q
 fear =["Ocean's Eleven", "Good Will Hunting", "Almost Famous", "Ferris Bueller’s Day Off", "Billy Madison", "The Italian Job", "This is Spinal Tap", "The Secret Life of Walter Mitty", "Groundhog Day", "Jurassic Park", "Die Hard", "The Fifth Element", "Trading Places", "Starship Troopers", "Raiders of the Lost Ark", "Face/Off", "The Rock", "Office Space", "Creed", "Jack Reacher"]
 angry = ["The Matrix", "Apocalypse Now", "Gladiator", "Scarface", "Judas and the Black Messiah", "Fight Club", "Warrior", "Reservoir Dogs", "V for Vendetta", "Heat", "Snowpiercer", "Joker", "Pulp Fiction", "The Dark Knight", "A Clockwork Orange", "American Psycho", "Sin City", "Taxi Driver", "The Equalizer", "Unforgiven"]
 sad = ["The Shawshank Redemption", "The Godfather", "Eternal Sunshine of the Spotless Mind", "Schindler's List", "One Flew Over the Cuckoo's Nest", "Requiem for a Dream", "American Beauty", "A Beautiful Mind", "Spotlight", "Hotel Rwanda", "Her", "12 Angry Men", "Forrest Gump", "City of God", "The Green Mile", "Whiplash", "American History X", "Braveheart", "Lawrence of Arabia", "12 Years a Slave"]
-happy = ["Coming to America", "Parasite", "Once Upon a Time... In Hollywood", "Thor: Ragnarok", "The Gentlemen","Deadpool", "Back to the Future", "Snatch", "The Sting", "Lock, Stock and Two Smoking Barrels", "The Grand Budapest Hotel", "The Truman Show", "Aladdin", "The Big Lebowski", "The Blues Brothers", "The Goonies", "The Princess Bride", "Wall-E", "Toy Story", "Friday"]
+happy = ["Coming to America", "Parasite", "Once Upon a Time... In Hollywood", "Thor: Ragnarok", "The Gentlemen", "Deadpool", "Back to the Future", "Snatch", "The Sting", "Lock, Stock and Two Smoking Barrels", "The Grand Budapest Hotel", "The Truman Show", "Aladdin", "The Big Lebowski", "The Blues Brothers", "The Goonies", "The Princess Bride", "Wall-E", "Toy Story", "Friday"]
 
 client = discord.Client()
 
