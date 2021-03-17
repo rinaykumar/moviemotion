@@ -1,5 +1,5 @@
-API_TOKEN = 'ODE3NjI5Mjc0NjcyMzMyODMw.YEMSmQ.Z6JcYeF9CRU2m0uavsuHD1K80BU'
-OMDB_TOKEN = '972242a8'
+API_TOKEN = ''
+OMDB_TOKEN = ''
 
 import discord
 import text2emotion as te
