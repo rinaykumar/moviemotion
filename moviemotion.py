@@ -7,11 +7,11 @@ import random
 import requests
 
 # Movie title arrays
-surprise = ["The Suicide Squad", "Midsommar", "Shutter Island", "Gone Girl", "Get Out", "National Treasure", "North by Northwest", "The Prestige", "Jurassic Park", "The Little Things", "Prisoners", "Donnie Darko", "Sicario", "The Usual Suspects", "Tenet", "The Lord of the Rings: The Return of the King", "Inception", "Interstellar", "Seven Samurai", "The Lion King"]
-fear =["Get Out", "Alien", "The Meg", "The Shining", "Split", "Saving Private Ryan", "The Pianist", "Casablanca", "Dara of Jasenovac", "Apocalypse Now", "A Quiet Place", "The Silence of the Lambs", "Joker", "Oldboy", "Psycho", "Rosemary's Baby", "Halloween", "Wonder Woman 1984", "The Suicide Squad", "28 Days Later"]
-angry = ["The Matrix", "Star Wars: Episode V", "Gladiator", "Terminator 2", "Oldboy", "Aliens", "Warrior", "Die Hard", "Mission: Impossible", "Black Panther", "Snowpiercer", "Joker", "Pulp Fiction", "The Departed", "Goodfellas", "American Psycho", "Ocean’s Eleven", "Taxi Driver", "The Equalizer", "Scarface"]
-sad = ["The Shawshank Redemption","The Godfather","The Dark Knight","Schindler's List","Fight Club","Shadow of a Doubt","The Night of the Hunter","The Third Man","Touch of Evil","Out of the Past","Judas and the Black Messiah","12 Angry Men","Forrest Gump","City of God","The Green Mile","Whiplash","American History X","Braveheart","Lawrence of Arabia","12 Years a Slave"]
-happy = ["Coming to America","Parasite","Once Upon a Time... In Hollywood","Thor: Ragnarok","The Gentlemen","Deadpool","Back to the Future","Snatch","The Sting","Lock, Stock and Two Smoking Barrels","The Grand Budapest Hotel","The Greatest Showman","Aladdin","The Sound of Music","The Blues Brothers","The Goonies","The Princess Bride","Wall-E","Toy Story","Friday"]
+surprise = ["Alien", "Midsommar", "Shutter Island", "Gone Girl", "Get Out", "A Queit Place", "North by Northwest", "The Prestige", "28 Days Later", "Oldboy", "Prisoners", "Donnie Darko", "Sicario", "The Usual Suspects", "Tenet", "Rosemary's Baby", "Inception", "Interstellar", "Seven Samurai", "The Shining"]
+fear =["Ocean's Eleven", "Good Will Hunting", "Almost Famous", "Ferris Bueller’s Day Off", "Billy Madison", "The Italian Job", "This is Spinal Tap", "The Secret Life of Walter Mitty", "Groundhog Day", "Jurassic Park", "Die Hard", "The Fifth Element", "Trading Places", "Starship Troopers", "Raiders of the Lost Ark", "Face/Off", "The Rock", "Office Space", "Creed", "Jack Reacher"]
+angry = ["The Matrix", "Apocalypse Now", "Gladiator", "Scarface", "Judas and the Black Messiah", "Fight Club", "Warrior", "Reservoir Dogs", "V for Vendetta", "Heat", "Snowpiercer", "Joker", "Pulp Fiction", "The Dark Knight", "A Clockwork Orange", "American Psycho", "Sin City", "Taxi Driver", "The Equalizer", "Unforgiven"]
+sad = ["The Shawshank Redemption", "The Godfather", "Eternal Sunshine of the Spotless Mind", "Schindler's List", "One Flew Over the Cuckoo's Nest", "Requiem for a Dream", "American Beauty", "A Beautiful Mind", "Spotlight", "Hotel Rwanda", "Her", "12 Angry Men", "Forrest Gump", "City of God", "The Green Mile", "Whiplash", "American History X", "Braveheart", "Lawrence of Arabia", "12 Years a Slave"]
+happy = ["Coming to America", "Parasite", "Once Upon a Time... In Hollywood", "Thor: Ragnarok", "The Gentlemen","Deadpool", "Back to the Future", "Snatch", "The Sting", "Lock, Stock and Two Smoking Barrels", "The Grand Budapest Hotel", "The Truman Show", "Aladdin", "The Big Lebowski", "The Blues Brothers", "The Goonies", "The Princess Bride", "Wall-E", "Toy Story", "Friday"]
 
 client = discord.Client()
 
@@ -28,7 +28,7 @@ async def on_message(message):
     if message.content.startswith('!moviemotion'):
          # Get user messages in the guild their in
         for chan in message.guild.text_channels:
-            async for msg in chan.history(limit=100): # Last 100 messages in each channel 
+            async for msg in chan.history(limit=5): # Last 5 messages in each channel 
                 if msg.author.id == user_id:                                
                     # Save the messages to an array
                     messages = messages + " " + msg.content
