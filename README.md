@@ -2,6 +2,8 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/rinaykumar/moviemotion)
 ![GitHub](https://img.shields.io/github/license/rinaykumar/moviemotion)
 
+<img src="images/logo.png" width="200">
+
 A Discord bot that uses natural language processing sentiment analysis on your recent messages and recommends movies based on your mood.
 
 Add the bot to your server:
